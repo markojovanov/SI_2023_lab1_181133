@@ -127,7 +127,7 @@ git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
-18. Merge na bug1 kon master
+18. Merge na bug1 kon master, bez konflikti
 git merge bug1
 Updating 2328d95..51d6b9e
 Fast-forward
@@ -143,7 +143,7 @@ Already up to date.
 19. Sinhronizacija
 git fetch
 
-20. Merge na bug2 kon master
+20. Merge na bug2 kon master, so konflikti reseni avtomatski so "ort" strategija
 git merge bug2
 Auto-merging SILab1..java
 Merge made by the 'ort' strategy.
@@ -188,7 +188,7 @@ git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
-25. Merge na bug3 vo master
+25. Merge na bug3 vo master, bez konflikti
 git merge bug3
 Updating bd3d3e6..a66374e
 Fast-forward
