@@ -1,0 +1,203 @@
+5. Inicijalizacija na git vo lokalen repozitorium
+git init
+Initialized empty Git repository in /../SI_2023_lab1_181133-master/.git/
+
+6. Dodavanje README file i inicijalen commit
+echo "# SI_2023_lab1_181133" >> README.md
+git add README.md
+git commit -m "Initial commit"
+[master (root-commit) 402bbd7] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+ git branch -M master
+git remote add origin https://github.com/markojovanov/SI_2023_lab1_181133.git
+git push -u origin master
+
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master
+
+7. Dodavanje na java file so commit "Add java class"
+git add .
+git commit -m "Add java class"
+[master 2328d95] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1..java
+git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 628 bytes | 628.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   f5d16dc..2328d95  master -> master
+branch 'master' set up to track 'origin/master'.
+
+9. Otvaranje na tri granki
+git branch bug1
+git branch bug2
+git branch bug3
+
+10. Checkout na branch bug1
+git checkout bug1
+Switched to branch 'bug1'
+
+11. Popravka na greska i commit
+git add .
+git commit -m "Fix wrong loop for reading"
+[bug1 51d6b9e] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push -u origin bug1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug1
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+
+12. Checkout na branch bug2
+git checkout bug2
+Switched to branch 'bug2'
+
+13. Popravka na greska i commit
+git add .
+git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 e6608cb] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push -u origin bug2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug2
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+
+14. Checkout na branch bug3
+git checkout bug3
+Switched to branch 'bug3'
+
+15. Popravka na greska i commit
+git add .
+git commit -m "Fix method sumEvenNumbers"
+[bug3 3b8cd4a] Fix method sumEvenNumbers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+git push -u origin bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug3' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug3
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug3 -> bug3
+branch 'bug3' set up to track 'origin/bug3'.
+
+16. Sinhronizacija
+git fetch
+
+17. Checkout na granka master
+git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+18. Merge na bug1 kon master
+git merge bug1
+Updating 2328d95..51d6b9e
+Fast-forward
+ SILab1..java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   2328d95..51d6b9e  master -> master
+git pull
+Already up to date.
+
+19. Sinhronizacija
+git fetch
+
+20. Merge na bug2 kon master
+git merge bug2
+Auto-merging SILab1..java
+Merge made by the 'ort' strategy.
+ SILab1..java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   51d6b9e..bd3d3e6  master -> master
+
+21. Sinhronizacija
+git fetch
+
+22. Checkout na branch bug3
+git checkout bug3
+Switched to branch 'bug3'
+Your branch is up to date with 'origin/bug3'.
+
+23. Rebase sprema master
+git rebase origin/master
+Successfully rebased and updated refs/heads/bug3.
+git add.
+git push origin +bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ + 3b8cd4a...a66374e bug3 -> bug3 (forced update)
+
+24. Checkout na branch master
+git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+25. Merge na bug3 vo master
+git merge bug3
+Updating bd3d3e6..a66374e
+Fast-forward
+ SILab1..java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   bd3d3e6..a66374e  master -> master
+
+26. Sinhronizacija
+git fetch

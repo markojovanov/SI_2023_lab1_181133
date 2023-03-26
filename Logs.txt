@@ -1,0 +1,231 @@
+
+  git init
+Initialized empty Git repository in /../.git/
+  git remote add origin https://github.com/markojovanov/SI_2023_lab1_181133.git
+  git branch -M master
+  git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/markojovanov/SI_2023_lab1_181133.git'
+  git branch -M master
+  git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/markojovanov/SI_2023_lab1_181133.git'
+  echo "# SI_2023_lab1_181133" >> README.md
+  git init
+Reinitialized existing Git repository in /../.git/
+  git add README.md
+  git commit -m "first commit"
+[master (root-commit) 402bbd7] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+  git branch -M master
+  git remote add origin https://github.com/markojovanov/SI_2023_lab1_181133.git
+error: remote origin already exists.
+  git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+  git commit --amend
+[master f5d16dc] Initial commit
+ Date: Thu Mar 23 23:11:25 2023 +0100
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+  git push
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/markojovanov/SI_2023_lab1_181133.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  git push --force
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ + 402bbd7...f5d16dc master -> master (forced update)
+  git commit -m "Add java class"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	SILab1..java
+
+nothing added to commit but untracked files present (use "git add" to track)
+  git add .
+  git commit -m "Add java class"
+[master 2328d95] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1..java
+  git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 628 bytes | 628.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   f5d16dc..2328d95  master -> master
+branch 'master' set up to track 'origin/master'.
+  git branch bug1
+  git branch bug2
+  git branch bug3
+  git checkout bug1
+Switched to branch 'bug1'
+  git add .
+  git commit -m "Fix wrong loop for reading"
+[bug1 51d6b9e] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+  git push -u origin bug1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug1
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+  git checkout bug2
+Switched to branch 'bug2'
+  git add .
+  git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 e6608cb] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+  git push -u origin bug2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug2
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+  git checkout bug3
+Switched to branch 'bug3'
+  git add .
+  git commit -m "Fix method sumEvenNumbers"
+[bug3 3b8cd4a] Fix method sumEvenNumbers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+  git push -u origin bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'bug3' on GitHub by visiting:
+remote:      https://github.com/markojovanov/SI_2023_lab1_181133/pull/new/bug3
+remote: 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ * [new branch]      bug3 -> bug3
+branch 'bug3' set up to track 'origin/bug3'.
+  git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+  git merge bug1
+Updating 2328d95..51d6b9e
+Fast-forward
+ SILab1..java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+  git add .
+  git commit -m "Merge bug1"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+  git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   2328d95..51d6b9e  master -> master
+  git pull
+Already up to date.
+  git merge bug2
+Auto-merging SILab1..java
+Merge made by the 'ort' strategy.
+ SILab1..java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+  git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   51d6b9e..bd3d3e6  master -> master
+  git pull
+Already up to date.
+  git checkout bug3
+Switched to branch 'bug3'
+Your branch is up to date with 'origin/bug3'.
+  git fetch
+  git rebase origin/master
+Successfully rebased and updated refs/heads/bug3.
+  git add .
+  git push 
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ ! [rejected]        bug3 -> bug3 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/markojovanov/SI_2023_lab1_181133.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+  git rebase --continue
+fatal: No rebase in progress?
+  git push origin/bug3
+fatal: 'origin/bug3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  git push origin +bug3
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+ + 3b8cd4a...a66374e bug3 -> bug3 (forced update)
+  git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+  git merge bug3
+Updating bd3d3e6..a66374e
+Fast-forward
+ SILab1..java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+git fetch
+git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/markojovanov/SI_2023_lab1_181133.git
+   bd3d3e6..a66374e  master -> master
+git fetch
+
+
+
+
+
